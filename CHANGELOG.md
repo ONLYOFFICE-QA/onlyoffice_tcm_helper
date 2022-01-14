@@ -5,6 +5,7 @@
 ### New Features
 
 * Add `ruby-3.1` in CI
+* Mark `:pending` tests that passed as `:failed`
 
 ### Changes
 

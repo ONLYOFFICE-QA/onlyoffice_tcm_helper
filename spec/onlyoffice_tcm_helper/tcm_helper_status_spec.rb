@@ -39,5 +39,9 @@ RSpec.describe OnlyofficeTcmHelper::TcmHelper, '#status' do
         PseudoExampleLPV.new('Check getting service_unavailable status')
       ).status).to eq(:lpv)
     end
+
+    it 'Check that PendingButPassed status is failure' do
+      expect(tcm_helper.parse(PseudoExamplePendingButPassed.new('PendingButPassed test')).status).to eq(:failed)
+    end
   end
 end

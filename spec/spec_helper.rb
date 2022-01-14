@@ -12,6 +12,7 @@ require_relative '../lib/onlyoffice_tcm_helper/models/pseudo_example_passed'
 require_relative '../lib/onlyoffice_tcm_helper/models/pseudo_example_failed'
 require_relative '../lib/onlyoffice_tcm_helper/models/pseudo_example_aborted'
 require_relative '../lib/onlyoffice_tcm_helper/models/pseudo_example_pending'
+require_relative '../lib/onlyoffice_tcm_helper/models/pseudo_example_pending_but_passed'
 require_relative '../lib/onlyoffice_tcm_helper/models/pseudo_example_service_unavailable'
 require_relative '../lib/onlyoffice_tcm_helper/models/pseudo_example_lpv'
 

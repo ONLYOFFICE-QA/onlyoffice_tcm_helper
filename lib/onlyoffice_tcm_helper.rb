@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'onlyoffice_tcm_helper/helpers/pending_helper'
 require 'onlyoffice_tcm_helper/helpers/rspec_helper'
 require 'onlyoffice_tcm_helper/helpers/time_helper'
 require 'onlyoffice_tcm_helper/version'
@@ -11,6 +12,7 @@ require 'json'
 module OnlyofficeTcmHelper
   # Class for generate data for result by RSpec::Core::Example
   class TcmHelper
+    include PendingHelper
     include TimeHelper
     include RspecHelper
     # @return [Symbol] one of status: passed, passed_2, failed, aborted, pending, service_unavailable, lpv
@@ -72,8 +74,7 @@ module OnlyofficeTcmHelper
                   @comment = comment
                   :failed
                 elsif example.pending?
-                  @comment = example.execution_result.pending_message
-                  :pending
+                  handle_pending(example)
                 elsif result_is_passed?(example)
                   @comment = "\nOk"
                   :passed

@@ -2,13 +2,17 @@
 
 ## Unreleased (master)
 
-### 0.3.1 (2022-01-15)
+### Changes
+
+* Add more info to message if pending test passed
+
+## 0.3.1 (2022-01-15)
 
 ### Fixes
 
 * Fix check for passed `pending` tests
 
-### 0.3.0 (2022-01-15)
+## 0.3.0 (2022-01-15)
 
 ### New Features
 

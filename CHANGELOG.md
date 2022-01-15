@@ -2,6 +2,10 @@
 
 ## Unreleased (master)
 
+### Changes
+
+* Add more info to message if pending test passed
+
 ### 0.3.1 (2022-01-15)
 
 ### Fixes

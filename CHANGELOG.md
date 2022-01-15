@@ -2,6 +2,8 @@
 
 ## Unreleased (master)
 
+### 0.3.1 (2022-01-15)
+
 ### Fixes
 
 * Fix check for passed `pending` tests

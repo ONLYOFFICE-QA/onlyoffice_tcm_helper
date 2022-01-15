@@ -14,6 +14,7 @@ class PseudoExamplePendingButPassed < PseudoExample
     true
   end
 
+  # @return [String] exception data
   def exception
     'Expected example to fail since it is pending, but it passed.'
   end

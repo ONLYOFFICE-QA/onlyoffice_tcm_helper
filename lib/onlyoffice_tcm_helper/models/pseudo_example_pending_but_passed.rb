@@ -10,7 +10,13 @@ class PseudoExamplePendingButPassed < PseudoExample
                                                    "Expected pending 'Fake failure' to fail. No error was raised.")
   end
 
+  # @return [True] this example always pending
   def pending?
     true
+  end
+
+  # @return [String] exception data
+  def exception
+    'Expected example to fail since it is pending, but it passed.'
   end
 end

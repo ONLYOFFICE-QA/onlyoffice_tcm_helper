@@ -2,6 +2,8 @@
 
 ## Unreleased (master)
 
+## 0.3.2 (2022-01-15)
+
 ### Changes
 
 * Add more info to message if pending test passed

@@ -13,4 +13,8 @@ class PseudoExamplePendingButPassed < PseudoExample
   def pending?
     true
   end
+
+  def exception
+    'Expected example to fail since it is pending, but it passed.'
+  end
 end

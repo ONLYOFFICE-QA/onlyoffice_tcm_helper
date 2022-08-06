@@ -69,7 +69,7 @@ module OnlyofficeTcmHelper
                   comment = "\n#{example.exception.to_s
                                         .gsub('got:', "got:\n")
                                         .gsub('expected:', "expected:\n")
-                                        .gsub('to return ', "to return:\n")}\n"\
+                                        .gsub('to return ', "to return:\n")}\n" \
                             "In line:\n#{RspecHelper.find_failed_line(example)}"
                   @comment = comment
                   :failed

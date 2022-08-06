@@ -14,6 +14,7 @@
 
 * Check `dependabot` at 8:00 Moscow time daily
 * Changes from `rubocop-rspec` update to 2.9.0
+* Drop `ruby-2.6` support, since it's EOL'ed
 
 ## 0.3.2 (2022-01-15)
 

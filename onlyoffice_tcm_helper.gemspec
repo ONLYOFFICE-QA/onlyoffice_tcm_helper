@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name = OnlyofficeTcmHelper::NAME
   s.version = OnlyofficeTcmHelper::VERSION
   s.platform = Gem::Platform::RUBY
-  s.required_ruby_version = '>= 2.7'
+  s.required_ruby_version = '>= 3.0'
   s.authors = ['ONLYOFFICE', 'Dmitry Rotaty', 'Pavel Lobashov']
   s.email = %w[shockwavenn@gmail.com]
   s.summary = 'It is helper for work with tcm systems'

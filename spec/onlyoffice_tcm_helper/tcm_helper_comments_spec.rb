@@ -15,7 +15,8 @@ RSpec.describe OnlyofficeTcmHelper::TcmHelper, '#comment' do
     end
 
     it 'check comment for failed status' do
-      expect(tcm_helper.parse(PseudoExampleFailed.new('check comment for passed_2 status')).comment).not_to be_empty
+      failure = "Cannot find failed line because of exception: undefined method `backtrace'"
+      expect(tcm_helper.parse(PseudoExampleFailed.new('check comment for passed_2 status')).comment).to include(failure)
     end
 
     it 'check comment for aborted status' do

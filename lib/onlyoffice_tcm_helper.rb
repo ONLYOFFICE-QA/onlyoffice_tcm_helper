@@ -66,12 +66,7 @@ module OnlyofficeTcmHelper
     # @return [Symbol] is a symbolic name of test status
     def get_status_and_comment(example)
       @status = if result_is_failed?(example)
-                  comment = "\n#{example.exception.to_s
-                                        .gsub('got:', "got:\n")
-                                        .gsub('expected:', "expected:\n")
-                                        .gsub('to return ', "to return:\n")}\n" \
-                            "In line:\n#{RspecHelper.find_failed_line(example)}"
-                  @comment = comment
+                  @comment = form_failed_comment(example)
                   :failed
                 elsif example.pending?
                   handle_pending(example)
@@ -116,6 +111,20 @@ module OnlyofficeTcmHelper
 
     def result_is_lpv?(example)
       example.exception.to_s.include?('Limited program version')
+    end
+
+    private
+
+    # Form comment for failed test
+    # @param [RSpec::Core::Example] example to parse
+    # @return [String] comment
+    def form_failed_comment(example)
+      failed_line = RspecHelper.find_failed_line(example)
+      "\n#{example.exception.to_s
+                  .gsub('got:', "got:\n")
+                  .gsub('expected:', "expected:\n")
+                  .gsub('to return ', "to return:\n")}\n" \
+        "In line:\n#{failed_line}"
     end
   end
 end

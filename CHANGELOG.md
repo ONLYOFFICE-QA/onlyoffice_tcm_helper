@@ -12,6 +12,7 @@
 
 * Drop `ruby-2.7` support, since it's EOL'ed
 * Add additional verification to specs
+* Reduce some `rubocop` metrics
 
 ## 0.4.0 (2022-08-10)
 

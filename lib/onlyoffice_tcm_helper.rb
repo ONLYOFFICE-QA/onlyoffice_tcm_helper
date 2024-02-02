@@ -76,15 +76,8 @@ module OnlyofficeTcmHelper
                 elsif result_is_passed2?(example)
                   @comment = "\nPassed 2"
                   :passed_2
-                elsif result_is_service_unavailable?(example)
-                  @comment = "\n#{example.exception}"
-                  :service_unavailable
-                elsif result_is_lpv?(example)
-                  @comment = "\n#{example.exception}"
-                  :lpv
                 else
-                  @comment = "\n#{example.exception}"
-                  :aborted
+                  handle_other_status(example)
                 end
       @last_case = @case_name
     end
@@ -125,6 +118,20 @@ module OnlyofficeTcmHelper
                   .gsub('expected:', "expected:\n")
                   .gsub('to return ', "to return:\n")}\n" \
         "In line:\n#{failed_line}"
+    end
+
+    # Handle unavailable, lpv and aborted status
+    # @param [RSpec::Core::Example] example to parse
+    # @return [Symbol] status
+    def handle_other_status(example)
+      @comment = "\n#{example.exception}"
+      if result_is_service_unavailable?(example)
+        :service_unavailable
+      elsif result_is_lpv?(example)
+        :lpv
+      else
+        :aborted
+      end
     end
   end
 end

@@ -5,6 +5,7 @@
 ### Changes
 
 * Fix `rubocop-rspec-2.27.0` cop `RSpec/DescribedClass` warnings.
+* Fix `rubocop-1.64` cop `Style/SuperArguments` warnings.
 * Fix tests compatibility with `ruby-3.4`
 
 ## 1.0.0 (2024-02-02)

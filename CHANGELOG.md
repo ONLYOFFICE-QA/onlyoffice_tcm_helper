@@ -2,12 +2,17 @@
 
 ## Unreleased (master)
 
+### New Features
+
+* Add `ruby-3.4` to CI
+
 ### Changes
 
 * Fix `rubocop-rspec-2.27.0` cop `RSpec/DescribedClass` warnings.
 * Fix `rubocop-1.64` cop `Style/SuperArguments` warnings.
 * Fix tests compatibility with `ruby-3.4`
 * Fix `rubocop-1.65.0` cop `Gemspec/AddRuntimeDependency`
+* Remove `ruby-3.0` from CI, since it's EOLed
 
 ## 1.0.0 (2024-02-02)
 
